@@ -105,6 +105,10 @@ alias npi='npm run push-image'
 alias nt='npm run test'
 alias ndd='npm run deploy'
 
+# make aliases
+alias mr='make run'
+alias mb='make build'
+
 # Docker aliases
 alias ds='docker stop $(docker ps -aq)'
 alias drm='docker rm $(docker ps -aq --filter status=exited)'
