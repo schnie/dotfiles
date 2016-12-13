@@ -11,6 +11,6 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-colorscheme Tomorrow-Night-Eighties
+colorscheme hybrid_material
 " set background=dark
 hi Normal ctermbg=None
