@@ -99,7 +99,7 @@ export PATH=~/.local/bin:$PATH
 # Vim
 alias vi=vim
 
-alias l='ls -la --group-directories-first'
+alias l='ls -lah --group-directories-first'
 
 # npm run aliases
 alias ns='npm run start'
