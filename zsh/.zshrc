@@ -96,7 +96,10 @@ export PATH=~/.local/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Vim
 alias vi=vim
+
+alias l='ls -la --group-directories-first'
 
 # npm run aliases
 alias ns='npm run start'
