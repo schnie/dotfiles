@@ -100,6 +100,7 @@ export PATH=~/.local/bin:$PATH
 alias vi=vim
 
 alias l='ls -lah --group-directories-first'
+alias calc='bc'
 
 # npm run aliases
 alias ns='npm run start'
