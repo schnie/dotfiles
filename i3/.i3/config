@@ -212,8 +212,8 @@ client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $w
 client.urgent           $urgent_bg      $urgent_bg      $bg                   $white
 
 hide_edge_borders both
-new_window pixel 2
-gaps inner 20
+new_window pixel 3
+gaps inner 50
 gaps outer 20
 smart_gaps on
 smart_borders on
