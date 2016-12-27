@@ -61,7 +61,9 @@ $temperature eq -9999 and die 'Cannot find temperature';
 $temperature = $temperature * 1.8 + 32;
 
 # Print short_text, full_text
-print "$temperature°F\n" x2;
+# print "$temperature°F\n" x2;
+printf "%.0f°F\n", $temperature;
+printf "%.0f°F\n", $temperature;
 
 # Print color, if needed
 if ($temperature >= $t_crit) {
