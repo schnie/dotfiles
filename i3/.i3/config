@@ -237,4 +237,5 @@ bar {
         urgent_workspace    $urgent_bg         $urgent_bg         $fg
     }
 }
+
 exec --no-startup-id compton -b

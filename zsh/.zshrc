@@ -101,6 +101,7 @@ alias vi=vim
 
 alias l='ls -lah --group-directories-first'
 alias calc='bc'
+alias dots='cd $HOME/dotfiles && vim .'
 
 # Pacman aliases
 alias paccache='sudo pacman -Scc'
