@@ -102,6 +102,12 @@ alias vi=vim
 alias l='ls -lah --group-directories-first'
 alias calc='bc'
 
+# Pacman aliases
+alias paccache='sudo pacman -Scc'
+alias pacorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias pacupdate='yaourt -Syua'
+alias paccount='sudo pacman -Qq | wc -l'
+
 # npm run aliases
 alias ns='npm run start'
 alias nd='npm run dev'
@@ -116,9 +122,9 @@ alias mr='make run'
 alias mb='make build'
 
 # Docker aliases
-alias ds='docker stop $(docker ps -aq)'
-alias drm='docker rm $(docker ps -aq --filter status=exited)'
-alias drmid='docker rmi $(docker images -q --filter dangling=true)'
+alias docstop='docker stop $(docker ps -aq)'
+alias docexited='docker rm $(docker ps -aq --filter status=exited)'
+alias docdangling='docker rmi $(docker images -q --filter dangling=true)'
 
 # Setup RVM
 export PATH="$PATH:$HOME/.rvm/bin"
