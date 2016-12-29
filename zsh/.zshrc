@@ -99,7 +99,7 @@ export PATH=~/.local/bin:$PATH
 # Vim
 alias vi=vim
 
-alias l='ls -lah --group-directories-first'
+alias l='LC_COLLATE=C ls -lah --group-directories-first'
 alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 
