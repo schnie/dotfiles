@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+count=$(checkupdates | wc -l)
+output="   $count"
+
+available="#03A9F4"
+warning="#FFEE58"
+crit="#D84315"
+
+if (( count > 25 )); then
+    echo "<span foreground=\"$crit\">$output</span>"
+elif (( count > 15 )); then
+    echo "<span foreground=\"$warning\">$output</span>"
+elif (( count > 3 )); then
+    echo "<span foreground=\"$available\">$output</span>"
+fi
