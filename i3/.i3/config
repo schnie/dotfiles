@@ -70,10 +70,10 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id rofi -show drun -lines 3 -eh 2 -fullscreen -padding 700 -opacity "95" -font "System San Francisco Display 30"
 
-# bindsym $mod+Tab  exec --no-startup-id rofi -show window -lines 3 -eh 2 -fullscreen -padding 700 -opacity "95" -font "System San Francisco Display 30"
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+Tab  exec --no-startup-id rofi -show window -lines 3 -eh 2 -fullscreen -padding 700 -font "System San Francisco Display 30"
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 3 -eh 2 -fullscreen -padding 700 -font "System San Francisco Display 30"
 
 # change focus
 bindsym $mod+h focus left
