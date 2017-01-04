@@ -99,10 +99,6 @@ export PATH=~/.local/bin:$PATH
 # Vim
 alias vi=vim
 
-alias l='LC_COLLATE=C ls -lah --group-directories-first'
-alias calc='bc'
-alias dots='cd $HOME/dotfiles && vim .'
-
 # Pacman aliases
 alias paccache='sudo pacman -Scc'
 alias pacorphans='sudo pacman -Rns $(pacman -Qtdq)'
@@ -127,6 +123,11 @@ alias docstop='docker stop $(docker ps -aq)'
 alias docexited='docker rm $(docker ps -aq --filter status=exited)'
 alias docdangling='docker rmi $(docker images -q --filter dangling=true)'
 
+# Other aliases
+alias l='LC_COLLATE=C ls -lah --group-directories-first'
+alias calc='bc'
+alias dots='cd $HOME/dotfiles && vim .'
+
 # Setup RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -135,3 +136,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Setup NVM
 source "/usr/share/nvm/init-nvm.sh"
+
+# Disable C-s as XOFF
+stty -ixon
