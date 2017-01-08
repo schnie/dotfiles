@@ -20,7 +20,7 @@ set $focused_window #1565C0
 set $focused_workspace #0D47A1
 set $inactive_widow #263238
 set $inactive_window_text #90A4AE
-set $inactive_workspace_text #757575
+set $inactive_workspace_text #9E9E9E
 set $urgent_bg #D32F2F
 
 set $ws1 "  1:    "
