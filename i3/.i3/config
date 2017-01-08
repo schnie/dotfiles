@@ -224,7 +224,7 @@ smart_borders on
 bar {
     font xft: System San Francisco Display, FontAwesome 9
     position top
-    height 60
+    height 65
     status_command i3blocks
     colors {
         separator $bg
