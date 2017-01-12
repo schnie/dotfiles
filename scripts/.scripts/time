@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ "$BLOCK_BUTTON" -eq 1 ]]; then 
+    echo $(date -u +'%H:%M:%S UTC ')
+fi
+
+echo $(date +'%r ')
