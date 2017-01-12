@@ -33,7 +33,7 @@ squares="■"
 #There are 8 colors that reflect the current battery percentage when 
 #discharging
 dis_colors=("#D84315" "#FF7043" "#F9A825" "#FFEE58" "#81C784" "#66BB6A" "#4CAF50" "#43A047")
-charging_color="#0091EA"
+charging_color="#76FF03"
 full_color="#00C853"
 ac_color="#00C853"
 
