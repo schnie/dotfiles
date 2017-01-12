@@ -97,7 +97,7 @@ export PATH=~/.local/bin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Vim
-alias vi=vim
+alias vi='vim'
 
 # Pacman aliases
 alias paccache='sudo pacman -Scc'
