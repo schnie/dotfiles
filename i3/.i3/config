@@ -168,9 +168,9 @@ bindsym $mod+x exec $lock
 exec --no-startup-id xautolock -detectsleep -time 10 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -locker $lock
 
 # volume keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle && pkill -RTMIN+1 i3blocks
 
 # backlight keys
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo /home/schnie/.scripts/brightness +
