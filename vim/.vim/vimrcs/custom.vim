@@ -29,3 +29,6 @@ hi FoldColumn ctermbg=None
 
 " Close preview window after auto completion
 autocmd CompleteDone * pclose
+
+" Set F2 to toggle paste mode
+set pastetoggle=<F2>
