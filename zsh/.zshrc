@@ -129,6 +129,10 @@ alias l='LC_COLLATE=C ls -lah --group-directories-first'
 alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 
+# Weather aliases
+alias weather='curl wttr.in/Cincinnati'
+alias moon='curl wttr.in/Moon'
+
 # Setup RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
