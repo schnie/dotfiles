@@ -133,6 +133,9 @@ alias dots='cd $HOME/dotfiles && vim .'
 alias weather='curl wttr.in/Cincinnati'
 alias moon='curl wttr.in/Moon'
 
+# Screenshot
+alias screenshot='scrot -c -d 5'
+
 # Setup RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
