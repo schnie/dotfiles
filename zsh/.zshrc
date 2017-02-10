@@ -119,10 +119,12 @@ alias mr='make run'
 alias mb='make build'
 
 # Docker aliases
-alias docstop='docker stop $(docker ps -aq)'
-alias docexited='docker rm $(docker ps -aq --filter status=exited)'
-alias docdangling='docker rmi $(docker images -q --filter dangling=true)'
-alias docnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
+alias ds='docker stop $(docker ps -aq)'
+alias dk='docker kill $(docker ps -aq)'
+alias de='docker rm $(docker ps -aq --filter status=exited)'
+alias ddi='docker rmi $(docker images -q --filter dangling=true)'
+alias ddv='docker volume rm $(docker volume ls -q --filter dangling=true)'
+alias dnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
 
 # Other aliases
 alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
