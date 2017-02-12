@@ -88,10 +88,10 @@ bindsym $mod+l focus right
 # bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 20px
+bindsym $mod+Shift+j move down 20px
+bindsym $mod+Shift+k move up 20px
+bindsym $mod+Shift+l move right 20px
 
 bindsym $mod+Control+h workspace prev
 bindsym $mod+Control+l workspace next
@@ -184,10 +184,15 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $mod+h resize shrink width 10 px or 10 ppt
-        bindsym $mod+j resize grow height 10 px or 10 ppt
-        bindsym $mod+k resize shrink height 10 px or 10 ppt
-        bindsym $mod+l resize grow width 10 px or 10 ppt
+        bindsym $mod+h resize grow left 20 px or 20 ppt
+        bindsym $mod+j resize shrink up 20 px or 20 ppt
+        bindsym $mod+k resize grow up 20 px or 20 ppt
+        bindsym $mod+l resize shrink left 20 px or 20 ppt
+
+        bindsym $mod+Shift+h resize shrink right 20 px or 20 ppt
+        bindsym $mod+Shift+j resize grow down 20 px or 20 ppt
+        bindsym $mod+Shift+k resize shrink down 20 px or 20 ppt
+        bindsym $mod+Shift+l resize grow right 20 px or 20 ppt
 
         # same bindings, but for the arrow keys
         # bindsym Left resize shrink width 10 px or 10 ppt
