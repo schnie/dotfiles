@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'flazz/vim-colorschemes'
 	Plug 'groenewege/vim-less'
 	Plug 'isRuslan/vim-es6'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
 	Plug 'kien/ctrlp.vim'
 	Plug 'othree/es.next.syntax.vim'
 	Plug 'rbgrouleff/bclose.vim'
