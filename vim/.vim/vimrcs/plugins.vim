@@ -1,4 +1,24 @@
 """"""""""""""""""""""""""""""
+" => goyo + limelight plugins
+""""""""""""""""""""""""""""""""
+function! s:goyo_enter()
+    Limelight
+    set nolist
+endfunction
+
+function! s:goyo_leave()
+    Limelight!
+    set list
+    hi Normal ctermbg=None
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+let g:limelight_conceal_ctermfg = 'gray'
+
+
+""""""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""""
 

@@ -32,3 +32,6 @@ autocmd CompleteDone * pclose
 
 " Set F2 to toggle paste mode
 set pastetoggle=<F2>
+
+" Vertical splits go to right
+set splitright
