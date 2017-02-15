@@ -62,9 +62,6 @@ plugins=(git tmux ssh-agent z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Source RVM
-source ~/.rvm/scripts/rvm
-
 # User configuration
 
 export PATH=~/.local/bin:$PATH
@@ -141,7 +138,7 @@ alias moon='curl wttr.in/Moon'
 alias screenshot='scrot -c -d 5'
 
 # Setup RVM
-export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "/home/schnie/.rvm/scripts/rvm" ]] && source "/home/schnie/.rvm/scripts/rvm"
 
 # Setup GVM
 [[ -s "/home/schnie/.gvm/scripts/gvm" ]] && source "/home/schnie/.gvm/scripts/gvm"
