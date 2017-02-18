@@ -212,10 +212,10 @@ for_window [class="Lxappearance"] floating enable
 
 # Window colors
 #                       border          bg              text                  indicator
-client.focused          $focused_window $focused_window $white                $white
-client.focused_inactive $bg             $bg             $white                $white
-client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $white
-client.urgent           $urgent_bg      $urgent_bg      $bg                   $white
+client.focused          $focused_window $focused_window $white                $focused_window
+client.focused_inactive $bg             $bg             $white                $inactive_window
+client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $inactive_window
+client.urgent           $urgent_bg      $urgent_bg      $bg                   $inactive_window
 
 hide_edge_borders both
 new_window pixel 3
