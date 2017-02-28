@@ -3,9 +3,9 @@
 count=$(checkupdates | wc -l)
 output="   $count"
 
-available="#03A9F4"
-warning="#FFEE58"
-crit="#D84315"
+available="#8ABEB7"
+warning="#DE935F"
+crit="#A54242"
 
 if (( count > 25 )); then
     echo "<span foreground=\"$crit\">$output</span>"

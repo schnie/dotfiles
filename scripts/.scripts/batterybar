@@ -32,10 +32,17 @@ squares="■"
 
 #There are 8 colors that reflect the current battery percentage when 
 #discharging
-dis_colors=("#D84315" "#FF7043" "#FB8C00" "#FFA726" "#81C784" "#66BB6A" "#4CAF50" "#43A047")
-charging_color="#00E676"
-full_color="#00C853"
-ac_color="#00C853"
+
+# Material
+# dis_colors=("#D84315" "#FF7043" "#FB8C00" "#FFA726" "#81C784" "#66BB6A" "#4CAF50" "#43A047")
+# charging_color="#00E676"
+
+# Hybrid
+dis_colors=("#CC6666" "#CC6666" "#A54242" "#F0C674" "#DE935F" "#B5BD68" "#8C9440" "#8C9440")
+charging_color="#8ABEB7"
+
+full_color="#8C9440"
+ac_color="#8C9440"
 
 
 while getopts 1:2:3:4:5:6:7:8:c:f:a:h opt; do

@@ -12,16 +12,25 @@
 set $mod Mod4
 
 # Constants
-set $fg     #ECEFF1
+set $fg     #C5C8C6
 set $bg     #1d1f21
 set $white  #ffffff
 
-set $focused_window #1565C0
-set $focused_workspace #0D47A1
-set $inactive_widow #263238
-set $inactive_window_text #90A4AE
-set $inactive_workspace_text #9E9E9E
-set $urgent_bg #D32F2F
+set $focused_window #81A2BE
+set $focused_window_text #1d1f21
+
+set $inactive_widow #282A2E
+set $inactive_window_text #707880
+
+set $urgent_window #CC6666
+
+set $focused_workspace #5F819D66
+set $focused_workspace_text #C5C8C6
+
+set $inactive_workspace_text #707880
+
+set $urgent_workspace #A5424266
+set $urgent_workspace_text #C5C8C6
 
 set $ws1 "  1:    "
 set $ws2 "  2:    "
@@ -212,13 +221,13 @@ for_window [class="Lxappearance"] floating enable
 
 # Window colors
 #                       border          bg              text                  indicator
-client.focused          $focused_window $focused_window $white                $focused_window
-client.focused_inactive $bg             $bg             $white                $inactive_window
+client.focused          $focused_window $focused_window $focused_window_text  $focused_window
+client.focused_inactive $bg             $bg             $fg                   $inactive_window
 client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $inactive_window
-client.urgent           $urgent_bg      $urgent_bg      $bg                   $inactive_window
+client.urgent           $urgent_window  $urgent_window  $focused_window_text  $inactive_window
 
 hide_edge_borders both
-new_window pixel 3
+new_window pixel 2
 gaps inner 50
 gaps outer 20
 smart_gaps on
@@ -236,10 +245,10 @@ bar {
         background $bg
         statusline $fg
 #                           border             bg                 text
-        focused_workspace   $focused_workspace $focused_workspace $fg
-        active_workspace    $urgent_bg         $urgent_bg         $fg
+        focused_workspace   $focused_workspace $focused_workspace $focused_workspace_text
+        active_workspace    $bg                $bg                $urgent
         inactive_workspace  $bg                $bg                $inactive_workspace_text
-        urgent_workspace    $urgent_bg         $urgent_bg         $fg
+        urgent_workspace    $urgent_workspace  $urgent_workspace  $urgent_workspace_text
     }
 }
 
