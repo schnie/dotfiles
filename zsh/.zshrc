@@ -144,7 +144,7 @@ alias screenshot='scrot -c -d 5'
 [[ -s "/home/schnie/.gvm/scripts/gvm" ]] && source "/home/schnie/.gvm/scripts/gvm"
 
 # Setup NVM
-source "/usr/share/nvm/init-nvm.sh"
+# source "/usr/share/nvm/init-nvm.sh"
 
 # Disable C-s as XOFF
 stty -ixon
