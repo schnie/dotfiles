@@ -137,14 +137,5 @@ alias moon='curl wttr.in/Moon'
 # Screenshot
 alias screenshot='scrot -c -d 5'
 
-# Setup RVM
-[[ -s "/home/schnie/.rvm/scripts/rvm" ]] && source "/home/schnie/.rvm/scripts/rvm"
-
-# Setup GVM
-[[ -s "/home/schnie/.gvm/scripts/gvm" ]] && source "/home/schnie/.gvm/scripts/gvm"
-
-# Setup NVM
-# source "/usr/share/nvm/init-nvm.sh"
-
 # Disable C-s as XOFF
 stty -ixon
