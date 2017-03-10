@@ -114,6 +114,7 @@ alias ndd='npm run deploy'
 # make aliases
 alias mr='make run'
 alias mb='make build'
+alias mt='make test'
 
 # Docker aliases
 alias ds='docker stop $(docker ps -aq)'
