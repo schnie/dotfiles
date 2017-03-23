@@ -45,7 +45,7 @@ set $ws10 "  10:    "
 
 assign [class="(?i).*chrome*."] $ws1
 assign [class="(?i).*jetbrains*."] $ws3
-assign [class="(?i).*robomongo*."] $ws4
+assign [class="(?i).*studio 3t*."] $ws4
 assign [title="(?i).*dbeaver*."] $ws4
 assign [title="(?i).*zathura*."] $ws10
 
@@ -82,7 +82,7 @@ bindsym $mod+Shift+q kill
 
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+Tab  exec --no-startup-id rofi -show window -lines 3 -eh 2 -fullscreen -padding 700 -font "System San Francisco Display 30"
-bindsym $mod+d exec --no-startup-id rofi -show drun -lines 3 -eh 2 -fullscreen -padding 700 -font "System San Francisco Display 30"
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 5 -eh 2 -padding 150 -font "System San Francisco Display 30"
 
 # change focus
 bindsym $mod+h focus left
