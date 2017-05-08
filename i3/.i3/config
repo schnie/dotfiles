@@ -81,8 +81,7 @@ bindsym $mod+Shift+q kill
 # installed.
 
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-# bindsym $mod+Tab  exec --no-startup-id rofi -show window -lines 3 -eh 2 -fullscreen -padding 700 -font "System San Francisco Display 30"
-bindsym $mod+d exec --no-startup-id rofi -show drun -lines 7 -eh 2 -padding 150 -font "System San Francisco Display 28"
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+h focus left
