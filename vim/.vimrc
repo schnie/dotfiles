@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'corntrace/bufexplorer'
     Plug 'easymotion/vim-easymotion'
     Plug 'fatih/vim-go'
-    Plug 'flazz/vim-colorschemes'
     Plug 'groenewege/vim-less'
     Plug 'isRuslan/vim-es6'
     Plug 'junegunn/goyo.vim'
@@ -24,6 +23,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 
