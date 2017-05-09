@@ -1,6 +1,7 @@
 " Set some defaults
 set nofoldenable
 set noshowmode
+set relativenumber
 set number
 set list
 set listchars=tab:▸\ ,space:·,eol:¬
@@ -35,3 +36,9 @@ set pastetoggle=<F2>
 
 " Vertical splits go to right
 set splitright
+
+nmap X "_d
+nmap XX "_dd
+vmap X "_d
+vmap x "_d
+nnoremap x "_x
