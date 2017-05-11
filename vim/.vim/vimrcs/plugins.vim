@@ -40,7 +40,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='raven'
+let g:airline_theme='hybridline'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
