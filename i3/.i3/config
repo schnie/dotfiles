@@ -29,7 +29,7 @@ set $focused_workspace_text #C5C8C6
 
 set $inactive_workspace_text #707880
 
-set $urgent_workspace #F0C67466
+set $urgent_workspace #B294BB66
 set $urgent_workspace_text #C5C8C6
 
 set $ws1 "  1:    "
