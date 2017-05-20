@@ -38,7 +38,7 @@ let g:ctrlp_max_height = 20
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|node_modules|DS_Store)|\_site)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|DS_Store)|\_site|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \}
 
