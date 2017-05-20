@@ -24,12 +24,12 @@ set $inactive_window_text #707880
 
 set $urgent_window #CC6666
 
-set $focused_workspace #5F819D66
+set $focused_workspace #5F819D99
 set $focused_workspace_text #C5C8C6
 
 set $inactive_workspace_text #707880
 
-set $urgent_workspace #B294BB66
+set $urgent_workspace #B294BB99
 set $urgent_workspace_text #C5C8C6
 
 set $ws1 "  1:    "
