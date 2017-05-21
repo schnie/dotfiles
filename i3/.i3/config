@@ -24,13 +24,13 @@ set $inactive_window_text #707880
 
 set $urgent_window #CC6666
 
-set $focused_workspace #5F819D99
-set $focused_workspace_text #C5C8C6
+set $focused_workspace #1d1f21
+set $focused_workspace_text #DE935F
 
-set $inactive_workspace_text #707880
+set $inactive_workspace_text #373B41
 
-set $urgent_workspace #B294BB99
-set $urgent_workspace_text #C5C8C6
+set $urgent_workspace #1d1f21
+set $urgent_workspace_text #CC6666
 
 set $ws1 "  1:    "
 set $ws2 "  2:    "
@@ -247,7 +247,7 @@ bar {
         background $bg
         statusline $fg
 #                           border             bg                 text
-        focused_workspace   $focused_workspace $focused_workspace $focused_workspace_text
+        focused_workspace   $focused_workspace $focused_workspace $fg
         active_workspace    $bg                $bg                $urgent
         inactive_workspace  $bg                $bg                $inactive_workspace_text
         urgent_workspace    $urgent_workspace  $urgent_workspace  $urgent_workspace_text
