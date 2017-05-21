@@ -3,7 +3,7 @@
 count=$(checkupdates | wc -l)
 output="   $count"
 
-available="#8ABEB7"
+available="#81A2BE"
 warning="#DE935F"
 crit="#A54242"
 
