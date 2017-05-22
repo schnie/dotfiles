@@ -27,10 +27,10 @@ set $urgent_window #CC6666
 set $focused_workspace #1d1f21
 set $focused_workspace_text #DE935F
 
-set $inactive_workspace_text #707880
+set $inactive_workspace_text #373B41
 
 set $urgent_workspace #1d1f21
-set $urgent_workspace_text #CC6666
+set $urgent_workspace_text #DE935F
 
 set $ws1 "  1:    "
 set $ws2 "  2:    "
@@ -44,6 +44,7 @@ set $ws9 "  9:     "
 set $ws10 "  10:    "
 
 assign [class="(?i).*chrome*."] $ws1
+# assign [class="(?i).*urxvt*."] $ws2
 assign [class="(?i).*jetbrains*."] $ws3
 assign [class="(?i).*gvim*."] $ws3
 assign [class="(?i).*studio 3t*."] $ws4
