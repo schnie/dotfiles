@@ -27,7 +27,7 @@ set $urgent_window #CC6666
 set $focused_workspace #1d1f21
 set $focused_workspace_text #DE935F
 
-set $inactive_workspace_text #373B41
+set $inactive_workspace_text #707880
 
 set $urgent_workspace #1d1f21
 set $urgent_workspace_text #DE935F
@@ -36,7 +36,7 @@ set $ws1 "  1:    "
 set $ws2 "  2:    "
 set $ws3 "  3:    "
 set $ws4 "  4:    "
-set $ws5 "  5:    "
+set $ws5 "  5:    "
 set $ws6 "  6:    "
 set $ws7 "  7:    "
 set $ws8 "  8:    "
@@ -49,6 +49,7 @@ assign [class="(?i).*jetbrains*."] $ws3
 assign [class="(?i).*gvim*."] $ws3
 assign [class="(?i).*studio 3t*."] $ws4
 assign [title="(?i).*dbeaver*."] $ws4
+assign [title="(?i).*virtualbox*."] $ws5
 assign [title="(?i).*zathura*."] $ws10
 assign [title="^htop$"] $ws10
 assign [title="^ranger$"] $ws10
