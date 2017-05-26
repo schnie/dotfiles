@@ -2,7 +2,10 @@
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
 ! Pretty font
-URxvt.font: xft:Inconsolata:size=10
+URxvt.font: xft:Inconsolata\ for\ Powerline:pixelsize=35:antialias=true:hinting=true, xft:Inconsolata:pixelsize=35
+/* URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:size=9:antialias=true:hinting=true, xft:Inconsolata:size=9 */
+/* URxvt.font: xft:Anonymice\ Powerline:size=9:antialias=true:hinting=true */
+URxvt.letterSpace: -1
 
 ! No scrollbar
 URxvt.scrollBar: false
