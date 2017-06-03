@@ -257,4 +257,3 @@ bar {
 }
 
 exec --no-startup-id compton -b
-exec --no-startup-id i3-msg 'exec /usr/bin/pulseaudio --start'
