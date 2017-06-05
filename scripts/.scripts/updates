@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-count=$(pacaur -uk | grep 'ignored' -v | wc -l)
+count=$(checkupdates | wc -l)
+# countaur=$(pacaur -k | grep 'ignored' -v | wc -l)
 output="   $count"
 
 available="#81A2BE"
