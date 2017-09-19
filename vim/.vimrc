@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kien/ctrlp.vim'
     Plug 'othree/es.next.syntax.vim'
     Plug 'rbgrouleff/bclose.vim'
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'w0ng/vim-hybrid'
+    Plug 'w0rp/ale'
 call plug#end()
 
 
