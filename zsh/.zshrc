@@ -70,7 +70,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export GOPATH=~/go
 export PATH=~/.local/bin:$PATH
+export PATH=~/go/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -131,17 +133,28 @@ alias dockill='docker kill $(docker ps -aq)'
 # alias ddv='docker volume rm $(docker volume ls -q --filter dangling=true)'
 alias docnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
 
-# Other aliases
-alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
-alias calc='bc'
-alias dots='cd $HOME/dotfiles && vim .'
+# Bluetooth aliases
+alias bt='bluetoothctl'
+alias bthc='echo -e "power on\nconnect \t\nquit" | bluetoothctl'
+alias bthd='echo -e "disconnect\nquit" | bluetoothctl'
 
 # Weather aliases
 alias weather='curl wttr.in/Cincinnati'
 alias moon='curl wttr.in/Moon'
+
+# Other aliases
+alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
+alias calc='bc'
+alias dots='cd $HOME/dotfiles && vim .'
+alias ipaddr='curl ifconfig.co'
+alias v='pulsemixer'
 
 # Screenshot
 alias screenshot='scrot -c -d 5'
 
 # Disable C-s as XOFF
 stty -ixon
+
+# Python virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
