@@ -130,3 +130,12 @@ map <Leader>h <Plug>(easymotion-linebackward)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Asynchronous Lint Engine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:ale_sign_column_always = 1
+
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
