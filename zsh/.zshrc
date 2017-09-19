@@ -158,3 +158,6 @@ stty -ixon
 # Python virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+
+# Astronomer CLI
+export PATH="$PATH:$HOME/.astro/"
