@@ -1,0 +1,22 @@
+#!/bin/bash
+
+POWERED=$(echo -e 'show\nquit' | bluetoothctl | awk 'FNR == 9 {print $2}')
+COLOR=""
+SYMBOL=""
+
+if [[ $POWERED =~ "yes" ]] ; then
+    OUTPUT="$SYMBOL Enabled"
+    COLOR="#8C9440"
+else
+    OUTPUT="$SYMBOL Disabled"
+fi
+
+BT_HEADSET=$(pacmd list-sinks | grep bluetooth)
+if [[ ! -z "$BT_HEADSET" ]] ; then
+    OUTPUT="$SYMBOL Connected"
+    COLOR="#5E8D87"
+fi
+
+echo $OUTPUT
+echo $OUTPUT
+echo $COLOR
