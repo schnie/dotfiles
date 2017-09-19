@@ -148,6 +148,7 @@ alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
 alias v='pulsemixer'
+alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
 
 # Screenshot
 alias screenshot='scrot -c -d 5'
