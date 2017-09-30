@@ -139,3 +139,17 @@ let g:ycm_confirm_extra_conf=0
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-jsx
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ack.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
