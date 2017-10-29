@@ -70,9 +70,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export GOPATH=~/go
+export GOPATH=~/repos/go
+export PATH=$GOPATH/bin:$PATH
+
 export PATH=~/.local/bin:$PATH
-export PATH=~/go/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
