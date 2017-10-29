@@ -59,7 +59,8 @@ nmap <leader>ps :CtrlPMRU<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='hybridline'
+" let g:airline_theme='hybridline'
+let g:airline_theme='custom'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -72,6 +73,12 @@ let g:airline_powerline_fonts = 1
 
 let g:airline_skip_empty_sections = 1
 
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" let g:airline_symbols.maxlinenr=''
+let g:airline_symbols.linenr=''
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
@@ -139,6 +146,12 @@ let g:ycm_confirm_extra_conf=0
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-go
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:go_fmt_command = "goimports"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
