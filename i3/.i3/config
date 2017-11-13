@@ -49,6 +49,7 @@ assign [class="(?i).*jetbrains*."] $ws3
 assign [class="(?i).*gvim*."] $ws3
 assign [class="(?i).*studio 3t*."] $ws4
 assign [title="(?i).*dbeaver*."] $ws4
+assign [title="(?i).*sqlectron*."] $ws4
 assign [title="(?i).*virtualbox*."] $ws5
 assign [title="(?i).*zathura*."] $ws10
 assign [title="^htop$"] $ws10
