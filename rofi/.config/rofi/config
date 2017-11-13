@@ -7,7 +7,7 @@ rofi.color-urgent: #282A2E, #A54242, #282A2E, #A54242, #1D1F21
 rofi.padding: 80
 rofi.line-padding: 20
 rofi.lines: 7
-rofi.font: Inconsolata 28
+rofi.font: Roboto Mono for Powerline 28
 rofi.bw: 5
 rofi.eh: 1
 rofi.separator-style: solid

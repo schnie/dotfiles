@@ -3,10 +3,14 @@ URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
 ! Pretty font
 /* URxvt.font: xft:Inconsolata\ for\ Powerline:size=10:antialias=true:hinting=true, xft:Inconsolata:size=10 */
-URxvt.font: xft:Inconsolata:pixelsize=35, xft:Inconsolata\ for\ Powerline:pixelsize=35:antialias=true:hinting=true
-URxvt.boldFont: xft:Inconsolata:bold:pixelsize=35, xft:Inconsolata\ for\ Powerline:bold:pixelsize=35:antialias=true:hinting=true
+/* URxvt.font: xft:Inconsolata\ for\ Powerline:pixelsize=35:antialias=true:hinting=true, xft:Inconsolata:pixelsize=35 */
+/* URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=32:antialias=true:hinting=true */
 /* URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:size=9:antialias=true:hinting=true, xft:Inconsolata:size=9 */
-/* URxvt.font: xft:Anonymice\ Powerline:size=9:antialias=true:hinting=true */
+/* URxvt.font: xft:Anonymice\ Powerline:pixelsize=36:antialias=true:hinting=true */
+/* xft:Hack:pixelsize=33:antialias=true:hinting=true */
+URxvt.font: xft:Roboto Mono for Powerline:pixelsize=32:antialias=true:hinting=true, xft:Hack:pixelsize=32:antialias=true:hinting=true
+/* URxvt.boldFont: xft:Inconsolata\ for\ Powerline:bold:pixelsize=35:antialias=true:hinting=true, xft:Inconsolata:bold:pixelsize=35 */
+
 URxvt.letterSpace: -1
 
 ! No scrollbar
