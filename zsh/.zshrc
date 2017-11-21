@@ -127,6 +127,7 @@ alias mt='make test'
 # Docker aliases
 alias docstop='docker stop $(docker ps -aq)'
 alias dockill='docker kill $(docker ps -aq)'
+alias dc='docker-compose'
 
 # Replaced with docker docker cmd prune
 # alias de='docker rm $(docker ps -aq --filter status=exited)'
