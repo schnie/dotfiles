@@ -47,6 +47,7 @@ assign [class="(?i).*chrome*."] $ws1
 # assign [class="(?i).*urxvt*."] $ws2
 assign [class="(?i).*jetbrains*."] $ws3
 assign [class="(?i).*gvim*."] $ws3
+assign [class="(?i).*code*."] $ws3
 assign [class="(?i).*studio 3t*."] $ws4
 assign [title="(?i).*dbeaver*."] $ws4
 assign [title="(?i).*sqlectron*."] $ws4
