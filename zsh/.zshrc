@@ -73,6 +73,8 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=~/repos/go
 export PATH=$GOPATH/bin:$PATH
 
+export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
+
 export PATH=~/.local/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -125,15 +127,19 @@ alias mb='make build'
 alias mt='make test'
 
 # Docker aliases
-alias docstop='docker stop $(docker ps -aq)'
-alias dockill='docker kill $(docker ps -aq)'
+alias ds='docker stop $(docker ps -aq)'
+alias dk='docker kill $(docker ps -aq)'
+alias dr='docker rm $(docker ps -aq)'
 alias dc='docker-compose'
+alias di='docker images'
+alias dps='docker ps -a'
+alias dsp='docker system prune -f'
 
 # Replaced with docker docker cmd prune
 # alias de='docker rm $(docker ps -aq --filter status=exited)'
 # alias ddi='docker rmi $(docker images -q --filter dangling=true)'
 # alias ddv='docker volume rm $(docker volume ls -q --filter dangling=true)'
-alias docnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
+alias dnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
 
 # Bluetooth aliases
 alias bt='bluetoothctl'
