@@ -108,7 +108,7 @@ export PATH=~/.local/bin:$PATH
 alias vi='vim'
 
 # Pacman aliases
-alias paccache='sudo pacman -Scc'
+alias paccache='paccache -rk 1'
 alias pacorphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacupdate='pacaur -Syu'
 
