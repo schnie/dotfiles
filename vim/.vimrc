@@ -34,7 +34,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Source configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.vim/vimrcs/airline-theme.vim
 source ~/.vim/vimrcs/custom.vim
 source ~/.vim/vimrcs/basic.vim
 source ~/.vim/vimrcs/extended.vim

@@ -59,8 +59,8 @@ nmap <leader>ps :CtrlPMRU<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:airline_theme='hybridline'
-let g:airline_theme='custom'
+let g:airline_theme='hybridline'
+" let g:airline_theme='custom'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
