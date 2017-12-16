@@ -37,6 +37,10 @@ set pastetoggle=<F2>
 " Vertical splits go to right
 set splitright
 
+" Some language tab/space settings
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype dockerfile setlocal autoindent noexpandtab tabstop=4 shiftwidth=4
+
 " nmap X "_d
 " nmap XX "_dd
 " vmap X "_d
