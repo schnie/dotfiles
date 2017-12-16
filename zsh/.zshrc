@@ -133,13 +133,11 @@ alias dr='docker rm $(docker ps -aq)'
 alias dc='docker-compose'
 alias di='docker images'
 alias dps='docker ps -a'
-alias dsp='docker system prune -f'
-
-# Replaced with docker docker cmd prune
-# alias de='docker rm $(docker ps -aq --filter status=exited)'
-# alias ddi='docker rmi $(docker images -q --filter dangling=true)'
-# alias ddv='docker volume rm $(docker volume ls -q --filter dangling=true)'
-alias dnuke='sudo systemctl stop docker && sudo rm -rf /var/lib/docker && sudo systemctl start docker'
+alias dsp='docker system prune --force'
+alias dspv='docker system prune --volumes --force'
+alias dspva='docker system prune --volumes --all --force'
+alias dnuke='dspva'
+alias dsdf='docker system df'
 
 # Bluetooth aliases
 alias bt='bluetoothctl'
@@ -167,6 +165,9 @@ stty -ixon
 # Python virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+
+# For GPG in git
+export GPG_TTY=$(tty)
 
 # Astronomer CLI
 export PATH="$PATH:$HOME/.astro/"
