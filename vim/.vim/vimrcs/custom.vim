@@ -39,6 +39,7 @@ set splitright
 
 " Some language tab/space settings
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype dockerfile setlocal autoindent noexpandtab tabstop=4 shiftwidth=4
 
 " nmap X "_d
