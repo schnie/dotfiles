@@ -110,7 +110,7 @@ alias vi='vim'
 # Pacman aliases
 alias paccache='paccache -rk 1'
 alias pacorphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias pacupdate='pacaur -Syu'
+alias pacupdate='yay -Syu'
 
 # npm run aliases
 alias ns='npm run start'
