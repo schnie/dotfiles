@@ -19,7 +19,7 @@ set $white  #ffffff
 set $focused_window #373B41
 set $focused_window_text #B5BD68
 
-set $inactive_widow #282A2E
+set $inactive_widow #1D1F21
 set $inactive_window_text #707880
 
 set $urgent_window #CC6666
@@ -234,8 +234,8 @@ client.urgent           $urgent_window  $urgent_window  $focused_window_text  $i
 
 hide_edge_borders both
 new_window pixel 3
-gaps inner 50
-gaps outer 20
+gaps inner 10
+gaps outer 0
 smart_gaps on
 smart_borders on
 
