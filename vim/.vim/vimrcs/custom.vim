@@ -1,7 +1,7 @@
 " Set some defaults
 set nofoldenable
 set noshowmode
-set relativenumber
+" set relativenumber
 set number
 set list
 set listchars=tab:▸\ ,space:·,eol:¬

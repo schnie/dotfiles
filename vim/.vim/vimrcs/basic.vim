@@ -194,7 +194,7 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save, useful for Python and CoffeeScript
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge

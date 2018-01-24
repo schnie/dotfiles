@@ -140,7 +140,7 @@ let g:ycm_confirm_extra_conf=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Asynchronous Lint Engine
+" => Asynchronous Lint Engine (ALE)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:ale_sign_column_always = 1
 
