@@ -148,6 +148,14 @@ alias bthd='echo -e "disconnect\nquit" | bluetoothctl'
 alias weather='curl wttr.in/Cincinnati'
 alias moon='curl wttr.in/Moon'
 
+# Kubernetes
+alias kx=kubectx
+alias kxp=kubectx -
+kt() {
+    kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
+    echo "Kubernetes service token is now in clipboard!"
+}
+
 # Other aliases
 alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
 alias calc='bc'
@@ -155,8 +163,8 @@ alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
 alias v='pulsemixer'
 alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
-
-# Screenshot
+alias xc='xclip -selection clipboard'
+alias dul='du -a -h --max-depth=1 | sort -hr'
 alias screenshot='scrot -c -d 5'
 
 # Disable C-s as XOFF
