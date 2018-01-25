@@ -151,6 +151,7 @@ alias moon='curl wttr.in/Moon'
 # Kubernetes
 alias kx='kubectx'
 alias kxp='kubectx -'
+alias kc='kubectl'
 kt() {
     kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
     echo "Kubernetes service token is now in clipboard!"
