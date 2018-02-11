@@ -71,6 +71,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export GOPATH=~/repos/go
+export GOBIN=$GOPATH/bin
 export PATH=$GOPATH/bin:$PATH
 
 export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
@@ -132,6 +133,7 @@ alias dk='docker kill $(docker ps -aq)'
 alias dr='docker rm $(docker ps -aq)'
 alias dc='docker-compose'
 alias dcu='docker-compose up --build'
+alias dcud='docker-compose up --build -d'
 alias di='docker images'
 alias dps='docker ps -a'
 alias dsp='docker system prune --force'
@@ -154,7 +156,8 @@ alias kx='kubectx'
 alias kxp='kubectx -'
 alias kc='kubectl'
 kt() {
-    kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
+    # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
+    kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
     echo "Kubernetes service token is now in clipboard!"
 }
 
@@ -168,6 +171,7 @@ alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
 alias screenshot='scrot -c -d 5'
+alias tf='terraform'
 
 # Disable C-s as XOFF
 stty -ixon
@@ -180,4 +184,4 @@ source /usr/bin/virtualenvwrapper.sh
 export GPG_TTY=$(tty)
 
 # Astronomer CLI
-export PATH="$PATH:$HOME/.astro/"
+# export PATH="$PATH:$HOME/.astro/"
