@@ -8,10 +8,10 @@ available="#81A2BE"
 warning="#DE935F"
 crit="#A54242"
 
-if (( count > 25 )); then
+if (( count > 30 )); then
     echo "<span foreground=\"$crit\">$output</span>"
-elif (( count > 15 )); then
+elif (( count > 20 )); then
     echo "<span foreground=\"$warning\">$output</span>"
-elif (( count > 3 )); then
+elif (( count > 5 )); then
     echo "<span foreground=\"$available\">$output</span>"
 fi
