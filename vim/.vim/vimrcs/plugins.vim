@@ -38,7 +38,7 @@ let g:ctrlp_max_height = 20
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|DS_Store)|\_site|node_modules)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|DS_Store)|\_site|node_modules|vendor)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \}
 
@@ -152,6 +152,11 @@ let g:airline#extensions#ale#enabled = 1
 " => Vim-go
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_command = "goimports"
+let g:go_list_type = "quickfix"
+
+" nnoremap <C-n> :cnext<CR>
+" nnoremap <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
