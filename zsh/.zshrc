@@ -72,7 +72,7 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/repos/go
 export GOBIN=$GOPATH/bin
-export PATH=$GOPATH/bin:$PATH
+export PATH=$GOBIN:$PATH
 
 export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
 
@@ -126,6 +126,7 @@ alias ndd='npm run deploy'
 alias mr='make run'
 alias mb='make build'
 alias mt='make test'
+alias mi='make install'
 
 # Docker aliases
 alias ds='docker stop $(docker ps -aq)'
