@@ -156,11 +156,14 @@ alias moon='curl wttr.in/Moon'
 alias kx='kubectx'
 alias kxp='kubectx -'
 alias kc='kubectl'
+alias kp='kubectl proxy &'
 kt() {
     # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
     kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
     echo "Kubernetes service token is now in clipboard!"
 }
+# Helm
+alias hl='helm list'
 
 # Other aliases
 alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
