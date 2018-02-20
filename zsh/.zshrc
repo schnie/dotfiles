@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export GOPATH=~/repos/go
+export GOPATH=~/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
