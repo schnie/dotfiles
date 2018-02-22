@@ -159,6 +159,7 @@ alias kc='kubectl'
 alias kp='kubectl proxy &'
 kt() {
     # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
+    kubectl api-versions > /dev/null # Quick API call to refresh token if expired
     kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
     echo "Kubernetes service token is now in clipboard!"
 }
