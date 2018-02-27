@@ -41,9 +41,4 @@ set splitright
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype dockerfile setlocal autoindent noexpandtab tabstop=4 shiftwidth=4
-
-" nmap X "_d
-" nmap XX "_dd
-" vmap X "_d
-" vmap x "_d
-" nnoremap x "_x
+autocmd Filetype html setlocal autoindent ts=2 sts=2 sw=2

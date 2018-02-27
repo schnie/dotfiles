@@ -147,6 +147,12 @@ let g:ycm_confirm_extra_conf=0
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
+" Temporarily removed go vet
+" https://github.com/w0rp/ale/pull/1356
+let g:ale_linters = {
+  \ 'go': ['gofmt', 'golint'],
+  \}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
@@ -154,9 +160,21 @@ let g:airline#extensions#ale#enabled = 1
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+" let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+
 " nnoremap <C-n> :cnext<CR>
 " nnoremap <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+au FileType go nmap <F12> <Plug>(go-def)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
