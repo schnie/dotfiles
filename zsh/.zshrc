@@ -174,7 +174,7 @@ alias v='pulsemixer'
 alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
-alias screenshot='scrot -c -d 5'
+alias screenshot='scrot -c -d 5 ~/Pictures/screenshots/%Y-%m-%d.png'
 alias tf='terraform'
 
 # Disable C-s as XOFF
