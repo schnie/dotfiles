@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'fatih/vim-go'
     Plug 'groenewege/vim-less'
+    Plug 'hashivim/vim-terraform'
     Plug 'isRuslan/vim-es6'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
