@@ -165,6 +165,12 @@ kt() {
 # Helm
 alias hl='helm list'
 
+# Terraform
+alias tf='terraform'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+
 # Other aliases
 alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
 alias calc='bc'
@@ -175,7 +181,6 @@ alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
 alias screenshot='scrot -c -d 5 ~/Pictures/screenshots/%Y-%m-%d.png'
-alias tf='terraform'
 
 # Disable C-s as XOFF
 stty -ixon
