@@ -195,3 +195,9 @@ let g:jsx_ext_required = 0
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-helm
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl set ft=helm

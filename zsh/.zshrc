@@ -135,6 +135,7 @@ alias dr='docker rm $(docker ps -aq)'
 alias dc='docker-compose'
 alias dcu='docker-compose up --build'
 alias dcud='docker-compose up --build -d'
+alias dcdv='docker-compose down -v'
 alias di='docker images'
 alias dps='docker ps -a'
 alias dsp='docker system prune --force'
@@ -142,6 +143,8 @@ alias dspv='docker system prune --volumes --force'
 alias dspva='docker system prune --volumes --all --force'
 alias dnuke='dspva'
 alias dsdf='docker system df'
+alias dl='docker logs'
+alias de='docker exec -it'
 
 # Bluetooth aliases
 alias bt='bluetoothctl'
@@ -155,6 +158,10 @@ alias moon='curl wttr.in/Moon'
 # Kubernetes
 alias kx='kubectx'
 alias kxp='kubectx -'
+kxx() {
+    kubectx $(kubectx | grep $1)
+}
+
 alias kc='kubectl'
 alias kp='kubectl proxy &'
 kt() {
@@ -162,8 +169,16 @@ kt() {
     kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
     echo "Kubernetes service token is now in clipboard!"
 }
+
 # Helm
 alias hl='helm list'
+alias hd='helm delete --purge'
+
+# Minikube
+alias mk='minikube'
+alias mks='minikube start --cpus 4 --memory 8192 --bootstrapper kubeadm'
+alias mkd='minikube delete'
+alias mkdd='minikube dashboard'
 
 # Terraform
 alias tf='terraform'
@@ -180,7 +195,7 @@ alias v='pulsemixer'
 alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
-alias screenshot='scrot -c -d 5 ~/Pictures/screenshots/%Y-%m-%d.png'
+alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
 
 # Disable C-s as XOFF
 stty -ixon

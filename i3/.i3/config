@@ -178,7 +178,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec i3-msg exit
 
 # bind i3lock
-set $lock "$HOME/.scripts/lock $HOME/Pictures/icons/lock-blue.png"
+set $lock "$HOME/.scripts/lock $HOME/pictures/icons/lock-blue.png"
 bindsym $mod+x exec $lock
 exec --no-startup-id xautolock -detectsleep -time 10 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -locker $lock
 

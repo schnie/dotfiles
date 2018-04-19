@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rbgrouleff/bclose.vim'
     " Plug 'scrooloose/syntastic'
     Plug 'terryma/vim-multiple-cursors'
+    " Plug 'towolf/vim-helm'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-fugitive'
     " Plug 'tpope/vim-markdown'
