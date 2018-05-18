@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
     Plug 'Valloric/YouCompleteMe'
+    Plug 'vimwiki/vimwiki'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'w0ng/vim-hybrid'
