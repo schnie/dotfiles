@@ -176,7 +176,7 @@ alias hd='helm delete --purge'
 
 # Minikube
 alias mk='minikube'
-alias mks='minikube start --cpus 4 --memory 8192 --bootstrapper kubeadm'
+alias mks='minikube start --cpus 4 --memory 8192 --extra-config=apiserver.runtime-config=batch/v2alpha1 --bootstrapper=kubeadm'
 alias mkd='minikube delete'
 alias mkdd='minikube dashboard'
 
@@ -192,7 +192,7 @@ alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
 alias v='pulsemixer'
-alias astroupdate='curl -o- https://cli.astronomer.io/install.sh | bash'
+alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
 alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
