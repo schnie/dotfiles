@@ -176,7 +176,7 @@ alias hd='helm delete --purge'
 
 # Minikube
 alias mk='minikube'
-alias mks='minikube start --cpus 4 --memory 8192 --extra-config=apiserver.runtime-config=batch/v2alpha1 --bootstrapper=kubeadm'
+alias mks='minikube start --cpus 6 --memory 8192 --extra-config=apiserver.runtime-config=batch/v2alpha1 --bootstrapper=kubeadm'
 alias mkd='minikube delete'
 alias mkdd='minikube dashboard'
 
