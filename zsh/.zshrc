@@ -192,17 +192,19 @@ alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
 alias v='pulsemixer'
-alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
 alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
+
+# Astronomer
+alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 
 # Disable C-s as XOFF
 stty -ixon
 
 # Python virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper_lazy.sh
 
 # For GPG in git
 export GPG_TTY=$(tty)
