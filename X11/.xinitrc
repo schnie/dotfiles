@@ -33,7 +33,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap -option caps:super
-xset r rate 300 30
+xset r rate 300 60
 xrandr --dpi 250
 syndaemon -i 0.5 -t -K -R -d
 sh ~/.fehbg
