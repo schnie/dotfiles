@@ -158,16 +158,21 @@ alias moon='curl wttr.in/Moon'
 # Kubernetes
 alias kx='kubectx'
 alias kxp='kubectx -'
-kxx() {
-    kubectx $(kubectx | grep $1)
-}
-
+alias kn='kubens'
 alias kc='kubectl'
 alias kp='kubectl proxy &'
-kt() {
+alias kgp='kubectl get pods -o wide'
+alias kgs='kubectl get svc -o wide'
+
+ktg() {
     # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
     kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
-    echo "Kubernetes service token is now in clipboard!"
+    echo "GKE service token is now in clipboard!"
+}
+
+kta(){
+    kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}') | grep token: | awk '{print $2}' | xclip -selection clipboard
+    echo "EKS service token is now in clipboard!"
 }
 
 # Helm
