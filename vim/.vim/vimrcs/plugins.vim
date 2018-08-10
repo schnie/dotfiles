@@ -48,7 +48,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'r'
 
 " Use a leader instead of the actual named binding
-nmap <leader>p :CtrlP<cr>
+" nmap <leader>p :CtrlP<cr>
+nmap <leader>p :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
 " Easy bindings for its various modes
 nmap <leader>pb :CtrlPBuffer<cr>
