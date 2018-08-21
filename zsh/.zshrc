@@ -162,6 +162,7 @@ alias kn='kubens'
 alias kc='kubectl'
 alias kp='kubectl proxy &'
 alias kgp='kubectl get pods -o wide'
+alias kdp='kubectl delete pod'
 alias kgs='kubectl get svc -o wide'
 
 ktg() {
