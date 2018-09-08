@@ -141,6 +141,7 @@ alias dps='docker ps -a'
 alias dsp='docker system prune --force'
 alias dspv='docker system prune --volumes --force'
 alias dspva='docker system prune --volumes --all --force'
+alias dsdf='docker system df'
 alias dnuke='dspva'
 alias dsdf='docker system df'
 alias dl='docker logs'
@@ -215,5 +216,5 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 # For GPG in git
 export GPG_TTY=$(tty)
 
-# Astronomer CLI
-# export PATH="$PATH:$HOME/.astro/"
+# Set grep highlight color
+export GREP_COLOR='1;32'
