@@ -114,6 +114,10 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set diffopt+=vertical
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Easy Motion
