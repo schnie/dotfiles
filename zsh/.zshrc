@@ -177,6 +177,17 @@ kta(){
     echo "EKS service token is now in clipboard!"
 }
 
+ksd() {
+  dataKey=${2}
+  if [ -z "${2}" ]
+    then
+      dataKey="connection"
+  fi
+  kubectl get secret ${1} -o jsonpath --template $(echo "{.data.${dataKey}}") | base64 --decode
+  echo ""
+}
+
+
 # Helm
 alias hl='helm list'
 alias hd='helm delete --purge'
