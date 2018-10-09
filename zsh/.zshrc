@@ -166,18 +166,18 @@ alias kgp='kubectl get pods -o wide'
 alias kdp='kubectl delete pod'
 alias kgs='kubectl get svc -o wide'
 
-ktg() {
+function ktg() {
     # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
     kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
     echo "GKE service token is now in clipboard!"
 }
 
-kta(){
+function kta(){
     kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}') | grep token: | awk '{print $2}' | xclip -selection clipboard
     echo "EKS service token is now in clipboard!"
 }
 
-ksd() {
+function ksd() {
   dataKey=${2}
   if [ -z "${2}" ]
     then
@@ -187,10 +187,15 @@ ksd() {
   echo ""
 }
 
+function kdp() {
+  search=${1}
+  kubectl delete pod $(kubectl get pods | grep ${1} | awk '{print $1}')
+}
 
 # Helm
 alias hl='helm list'
 alias hd='helm delete --purge'
+alias hs='helm status '
 
 # Minikube
 alias mk='minikube'

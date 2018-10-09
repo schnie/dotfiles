@@ -111,7 +111,10 @@ let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set updatetime=750
 let g:gitgutter_enabled=1
+" let g:gitgutter_highlight_lines = 1
+let g:gitgutter_terminal_reports_focus=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
