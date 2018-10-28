@@ -222,6 +222,9 @@ alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
 # Astronomer
 alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 
+# Alias vim to nvim
+# alias vim='nvim'
+
 # Disable C-s as XOFF
 stty -ixon
 
