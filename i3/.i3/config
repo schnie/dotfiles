@@ -16,11 +16,11 @@ set $fg     #C5C8C6
 set $bg     #1d1f21
 set $white  #ffffff
 
-set $focused_window #C5C8C6
-set $focused_window_text #1D1F21
+set $focused_window #373B41
+set $focused_window_text #C5C8C6
 
 set $inactive_widow #1D1F21
-set $inactive_window_text #373B41
+set $inactive_window_text #707880
 
 set $urgent_window #CC6666
 
@@ -234,7 +234,7 @@ client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $i
 client.urgent           $urgent_window  $urgent_window  $focused_window_text  $inactive_window
 
 hide_edge_borders both
-new_window pixel 3
+new_window pixel 5
 gaps inner 10
 gaps outer 0
 smart_gaps on
