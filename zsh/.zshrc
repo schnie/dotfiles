@@ -163,7 +163,7 @@ alias kn='kubens'
 alias kc='kubectl'
 alias kp='kubectl proxy &'
 alias kgp='kubectl get pods -o wide'
-alias kdp='kubectl delete pod'
+# alias kdp='kubectl delete pod'
 alias kgs='kubectl get svc -o wide'
 
 function ktg() {
@@ -190,6 +190,16 @@ function ksd() {
 function kdp() {
   search=${1}
   kubectl delete pod $(kubectl get pods | grep ${1} | awk '{print $1}')
+}
+
+function klog() {
+  search=${1}
+  kubectl logs $(kubectl get pods | grep ${1} | awk '{print $1}')
+}
+
+function klogf() {
+  search=${1}
+  kubectl logs $(kubectl get pods | grep ${1} | awk '{print $1}') -f
 }
 
 # Helm
@@ -229,8 +239,11 @@ alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 stty -ixon
 
 # Python virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper_lazy.sh
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/bin/virtualenvwrapper_lazy.sh
+
+# Initialize pyenv
+eval "$(pyenv init -)"
 
 # For GPG in git
 export GPG_TTY=$(tty)
