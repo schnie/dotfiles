@@ -202,6 +202,11 @@ function klogf() {
   kubectl logs $(kubectl get pods | grep ${1} | awk '{print $1}') -f
 }
 
+function kedd() {
+  search=${1}
+  kubectl edit deployment $(kubectl get deployment | grep ${1} | awk '{print $1}')
+}
+
 # Helm
 alias hl='helm list'
 alias hd='helm delete --purge'
