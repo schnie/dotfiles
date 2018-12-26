@@ -28,6 +28,9 @@ hi TabLineFill term=bold cterm=bold ctermbg=None
 hi VertSplit cterm=None ctermbg=None ctermfg=None
 hi FoldColumn ctermbg=None
 
+" set hlsearch
+" hi Search cterm=None ctermfg=grey ctermbg=None
+
 " Close preview window after auto completion
 autocmd CompleteDone * pclose
 

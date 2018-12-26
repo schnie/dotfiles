@@ -88,24 +88,25 @@ let g:airline_symbols.linenr=''
 " let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
 " Python
-let g:syntastic_python_checkers=['']
+" let g:syntastic_python_checkers=['']
 
-" Javascript
-let g:syntastic_javascript_checkers = ['eslint']
+" " Javascript
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
-" Go
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+" " Go
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
-" Recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" " Recommended settings
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,8 +159,15 @@ let g:airline#extensions#ale#enabled = 1
 " Temporarily removed go vet
 " https://github.com/w0rp/ale/pull/1356
 let g:ale_linters = {
+  \ 'javascript': ['eslint'],
   \ 'go': ['gofmt', 'golint'],
   \}
+
+let g:ale_fixers = {
+  \ 'javascript': ['eslint'],
+  \}
+
+let g:ale_fix_on_save = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

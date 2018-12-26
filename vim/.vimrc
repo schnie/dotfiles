@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
+    Plug 'brooth/far.vim'
     Plug 'chr4/nginx.vim'
     Plug 'corntrace/bufexplorer'
     Plug 'easymotion/vim-easymotion'
