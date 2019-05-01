@@ -4,6 +4,7 @@
 call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'brooth/far.vim'
+    Plug 'chemzqm/vim-jsx-improve'
     Plug 'chr4/nginx.vim'
     Plug 'corntrace/bufexplorer'
     Plug 'easymotion/vim-easymotion'
