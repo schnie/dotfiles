@@ -120,6 +120,7 @@ alias nb='npm run build'
 alias nbi='npm run build-image'
 alias npi='npm run push-image'
 alias nt='npm run test'
+alias ntw='npm run test -- --watch'
 alias ndd='npm run deploy'
 
 # make aliases
@@ -244,8 +245,8 @@ alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 stty -ixon
 
 # Python virtualenvwrapper
-# export WORKON_HOME=~/.virtualenvs
-# source /usr/bin/virtualenvwrapper_lazy.sh
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper_lazy.sh
 
 # Initialize pyenv
 eval "$(pyenv init -)"
