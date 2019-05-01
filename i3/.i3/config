@@ -40,7 +40,7 @@ set $ws5 "  5:    "
 set $ws6 "  6:    "
 set $ws7 "  7:    "
 set $ws8 "  8:    "
-set $ws9 "  9:     "
+set $ws9 "  9:     "
 set $ws10 "  10:    "
 
 assign [class="(?i).*chrome*."] $ws1
@@ -54,6 +54,7 @@ assign [class="(?i).*jetbrains-datagrip*."] $ws4
 assign [title="(?i).*sqlectron*."] $ws4
 assign [title="(?i).*virtualbox*."] $ws5
 assign [title="(?i).*zathura*."] $ws10
+assign [title="(?i).*slack*."] $ws9
 assign [title="^htop$"] $ws10
 assign [title="^ranger$"] $ws10
 
