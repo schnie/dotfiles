@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/schnie/repos/helm.astronomer.io/charts/astronomer/templates'
+let g:netrw_dirhist_6='/home/schnie/repos/helm.astronomer.io/charts/astronomer'
+let g:netrw_dirhist_5='/home/schnie/repos/helm.astronomer.io/charts'
+let g:netrw_dirhist_4='/home/schnie/repos/helm.astronomer.io'
+let g:netrw_dirhist_3='/home/schnie/repos/helm.astronomer.io/secrets'
+let g:netrw_dirhist_2='/home/schnie/repos/helm.astronomer.io'
+let g:netrw_dirhist_1='/home/schnie/repos/helm.astronomer.io/secrets'
+let g:netrw_dirhist_0='/home/schnie/repos/helm.astronomer.io'
+let g:netrw_dirhist_9='/home/schnie/repos/helm.astronomer.io/charts/airflow/templates/secrets'
+let g:netrw_dirhist_8='/home/schnie/repos/helm.astronomer.io/charts/airflow/templates'

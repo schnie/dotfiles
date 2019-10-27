@@ -19,7 +19,7 @@ set $white  #ffffff
 set $focused_window #373B41
 set $focused_window_text #C5C8C6
 
-set $inactive_widow #1D1F21
+set $inactive_window #1D1F21
 set $inactive_window_text #707880
 
 set $urgent_window #CC6666
@@ -41,7 +41,7 @@ set $ws6 "  6:    "
 set $ws7 "  7:    "
 set $ws8 "  8:    "
 set $ws9 "  9:     "
-set $ws10 "  10:    "
+set $ws10 "  10:    "
 
 assign [class="(?i).*chrome*."] $ws1
 # assign [class="(?i).*urxvt*."] $ws2
@@ -53,10 +53,8 @@ assign [title="(?i).*dbeaver*."] $ws4
 assign [class="(?i).*jetbrains-datagrip*."] $ws4
 assign [title="(?i).*sqlectron*."] $ws4
 assign [title="(?i).*virtualbox*."] $ws5
-assign [title="(?i).*zathura*."] $ws10
 assign [title="(?i).*slack*."] $ws9
-assign [title="^htop$"] $ws10
-assign [title="^ranger$"] $ws10
+assign [class="(?i).*zoom*."] $ws10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -180,7 +178,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec i3-msg exit
 
 # bind i3lock
-set $lock "$HOME/.scripts/lock $HOME/pictures/icons/lock-blue.png"
+set $lock "$HOME/.scripts/lock $HOME/pictures/icons/lock.png"
 bindsym $mod+x exec $lock
 exec --no-startup-id xautolock -detectsleep -time 10 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -locker $lock
 
@@ -190,8 +188,8 @@ bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute && pk
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle && pkill -RTMIN+1 i3blocks
 
 # backlight keys
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo /home/schnie/.scripts/brightness +
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo /home/schnie/.scripts/brightness -
+bindsym XF86MonBrightnessUp exec --no-startup-id /home/schnie/.scripts/brightness +
+bindsym XF86MonBrightnessDown exec --no-startup-id /home/schnie/.scripts/brightness -
 
 #3 resize window (you can also use the mouse for that)
 mode "resize" {
@@ -228,11 +226,11 @@ bindsym $mod+r mode "resize"
 for_window [class="Lxappearance"] floating enable
 
 # Window colors
-#                       border          bg              text                  indicator
-client.focused          $focused_window $focused_window $focused_window_text  $focused_window
-client.focused_inactive $bg             $bg             $fg                   $inactive_window
-client.unfocused        $inactive_widow $inactive_widow $inactive_window_text $inactive_window
-client.urgent           $urgent_window  $urgent_window  $focused_window_text  $inactive_window
+#                       border           bg                text                  indicator
+client.focused          $focused_window  $focused_window   $focused_window_text  $focused_window
+client.focused_inactive $bg              $bg               $fg                   $inactive_window
+client.unfocused        $inactive_window $inactive_window  $inactive_window_text $inactive_window
+client.urgent           $urgent_window   $urgent_window    $focused_window_text  $inactive_window
 
 hide_edge_borders both
 new_window pixel 5
@@ -254,7 +252,7 @@ bar {
         statusline $fg
 #                           border             bg                 text
         focused_workspace   $focused_workspace $focused_workspace $fg
-        active_workspace    $bg                $bg                $urgent
+        active_workspace    $bg                $bg                $urgent_workspace
         inactive_workspace  $bg                $bg                $inactive_workspace_text
         urgent_workspace    $urgent_workspace  $urgent_workspace  $urgent_workspace_text
     }

@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'kien/ctrlp.vim'
-    Plug 'maxmellon/vim-jsx-pretty'
+    " Plug 'maxmellon/vim-jsx-pretty'
     Plug 'mileszs/ack.vim'
     Plug 'mustache/vim-mustache-handlebars'
     " Plug 'mxw/vim-jsx'

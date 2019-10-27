@@ -37,6 +37,8 @@ fi
 setxkbmap -option caps:super
 xset r rate 300 60
 xrandr --dpi 250
+xinput set-prop 12 272 1.7
+xinput set-prop 12 274 20
 syndaemon -i 0.5 -t -K -R -d
 sh ~/.fehbg
 unclutter &

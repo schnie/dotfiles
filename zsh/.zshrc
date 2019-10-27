@@ -4,7 +4,7 @@
 export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/schnie/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # Set editor.
 export EDITOR=vim
@@ -60,7 +60,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent z zsh-syntax-highlighting)
+plugins=(git z zsh-completions helm)
 
 if [[ ! "$LD_LIBRARY_PATH" =~ "intellij" ]]; then
     plugins+=(tmux)
@@ -74,7 +74,7 @@ export GOPATH=~/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
-export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
+# export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
 
 export PATH=~/.local/bin:$PATH
 
@@ -245,11 +245,14 @@ alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 stty -ixon
 
 # Python virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper_lazy.sh
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/bin/virtualenvwrapper_lazy.sh
 
 # Initialize pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
+
+# ZSH syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # For GPG in git
 export GPG_TTY=$(tty)

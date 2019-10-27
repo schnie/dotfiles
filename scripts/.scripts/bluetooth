@@ -1,7 +1,7 @@
 #!/bin/bash
 
 POWERED=$(echo -e 'show\nquit' | bluetoothctl | awk 'FNR == 9 {print $2}')
-COLOR=""
+COLOR="#707880"
 SYMBOL=""
 
 if [[ $POWERED =~ "yes" ]] ; then
