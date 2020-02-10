@@ -209,6 +209,7 @@ function kedd() {
 }
 
 # Helm
+alias helm='helm2.16'
 alias hl='helm list'
 alias hd='helm delete --purge'
 alias hs='helm status '
@@ -225,6 +226,9 @@ alias tfi='terraform init'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
 
+# Telepresence
+alias tp='telepresence'
+
 # Other aliases
 alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
 alias calc='bc'
@@ -233,7 +237,7 @@ alias ipaddr='curl ifconfig.co'
 alias v='pulsemixer'
 alias xc='xclip -selection clipboard'
 alias dul='du -a -h --max-depth=1 | sort -hr'
-alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
+alias screenshot='scrot -c -d 5 ~/images/screenshots/%Y-%m-%d.png'
 
 # Astronomer
 alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
@@ -259,3 +263,9 @@ export GPG_TTY=$(tty)
 
 # Set grep highlight color
 export GREP_COLOR='1;32'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/schnie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/schnie/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/schnie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/schnie/google-cloud-sdk/completion.zsh.inc'; fi
