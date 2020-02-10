@@ -2,14 +2,8 @@
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
 ! Pretty font
-/* URxvt.font: xft:Inconsolata\ for\ Powerline:size=10:antialias=true:hinting=true, xft:Inconsolata:size=10 */
-/* URxvt.font: xft:Inconsolata\ for\ Powerline:pixelsize=35:antialias=true:hinting=true, xft:Inconsolata:pixelsize=35 */
-/* URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=32:antialias=true:hinting=true */
-/* URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:size=10:antialias=true:hinting=true, xft:Inconsolata:size=10, xft:FontAwesome:size=10 */
-/* URxvt.font: xft:Anonymice\ Powerline:pixelsize=36:antialias=true:hinting=true */
-/* URxvt.font: xft:Roboto Mono for Powerline:pixelsize=32:antialias=true:hinting=true, xft:Hack:pixelsize=32:antialias=true:hinting=true */
-/* URxvt.boldFont: xft:Inconsolata\ for\ Powerline:bold:pixelsize=35:antialias=true:hinting=true, xft:Inconsolata:bold:pixelsize=35 */
-URxvt.font: xft:RobotoMono Nerd Font:pixelsize=32:antialias=true:hinting=true, xft:SauceCodePro Nerd Font:pixelsize=32:antialias=true:hinting=true, xft:InconsolataForPowerline Nerd Font:pixelsize=32
+/* URxvt.font: xft:RobotoMono Nerd Font:pixelsize=35:antialias=true:hinting=true, xft:SauceCodePro Nerd Font:pixelsize=35:antialias=true:hinting=true, xft:InconsolataForPowerline Nerd Font:pixelsize=35, xft:DejaVuSansMono Nerd Font:antialias=true:hinting=true:pixelsize=35 */
+URxvt.font: xft:DejaVuSansMono Nerd Font:antialias=true:hinting=true:pixelsize=35
 
 URxvt.letterSpace: -1
 
@@ -18,7 +12,7 @@ URxvt.scrollBar: false
 
 ! Link handling
 URxvt.matcher.button: 1
-URxvt.url-launcher: google-chrome-beta
+URxvt.url-launcher: google-chrome-stable
 
 ! Remove if not using tmux
 URxvt.saveLines: 0
