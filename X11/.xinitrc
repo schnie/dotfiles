@@ -6,6 +6,7 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 export GDK_SCALE=2
+# export QT_SCALE_FACTOR=0.9
 
 # merge in defaults and keymaps
 

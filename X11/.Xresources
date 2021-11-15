@@ -3,7 +3,7 @@ URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
 ! Pretty font
 /* URxvt.font: xft:RobotoMono Nerd Font:pixelsize=35:antialias=true:hinting=true, xft:SauceCodePro Nerd Font:pixelsize=35:antialias=true:hinting=true, xft:InconsolataForPowerline Nerd Font:pixelsize=35, xft:DejaVuSansMono Nerd Font:antialias=true:hinting=true:pixelsize=35 */
-URxvt.font: xft:DejaVuSansMono Nerd Font:antialias=true:hinting=true:pixelsize=35
+URxvt.font: xft:DejaVuSansMono Nerd Font:antialias=true:hinting=true:pixelsize=35, xft:Noto Color Emoji
 
 URxvt.letterSpace: -1
 

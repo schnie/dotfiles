@@ -180,7 +180,7 @@ bindsym $mod+Shift+e exec i3-msg exit
 # bind i3lock
 set $lock "$HOME/.scripts/lock $HOME/pictures/icons/lock.png"
 bindsym $mod+x exec $lock
-exec --no-startup-id xautolock -detectsleep -time 10 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -locker $lock
+exec --no-startup-id xautolock -detectsleep -time 30 -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" -locker $lock
 
 # volume keys
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute && pkill -RTMIN+10 i3blocks
@@ -251,9 +251,9 @@ bar {
         background $bg
         statusline $fg
 #                           border             bg                 text
-        focused_workspace   $focused_workspace $focused_workspace $fg
-        active_workspace    $bg                $bg                $urgent_workspace
-        inactive_workspace  $bg                $bg                $inactive_workspace_text
+        focused_workspace   #8C9440            #B5BD68            #373B41
+        # active_workspace    $bg                $bg                $urgent_workspace
+        # inactive_workspace  $bg                $bg                $inactive_workspace_text
         urgent_workspace    $urgent_workspace  $urgent_workspace  $urgent_workspace_text
     }
 }

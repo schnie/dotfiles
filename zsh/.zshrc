@@ -4,7 +4,8 @@
 export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
-export ZSH=/usr/share/oh-my-zsh
+# export ZSH=/usr/share/oh-my-zsh
+export ZSH="/home/schnie/.oh-my-zsh"
 
 # Set editor.
 export EDITOR=vim
@@ -60,7 +61,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-completions helm)
+# plugins=(git z zsh-completions helm)
+plugins=(git z helm zsh-syntax-highlighting)
 
 if [[ ! "$LD_LIBRARY_PATH" =~ "intellij" ]]; then
     plugins+=(tmux)
@@ -69,10 +71,12 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PATH=$PATH:/usr/local/kubebuilder/bin
 
-export GOPATH=~/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
+# export PATH=$PATH:/usr/local/go/bin
+# export GOPATH=~/go
+# export GOBIN=$GOPATH/bin
+# export PATH=$GOBIN:$PATH
 
 # export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
 
@@ -209,7 +213,6 @@ function kedd() {
 }
 
 # Helm
-alias helm='helm2.16'
 alias hl='helm list'
 alias hd='helm delete --purge'
 alias hs='helm status '
@@ -256,7 +259,7 @@ stty -ixon
 # eval "$(pyenv init -)"
 
 # ZSH syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # For GPG in git
 export GPG_TTY=$(tty)
@@ -264,8 +267,8 @@ export GPG_TTY=$(tty)
 # Set grep highlight color
 export GREP_COLOR='1;32'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/schnie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/schnie/google-cloud-sdk/path.zsh.inc'; fi
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/schnie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/schnie/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
