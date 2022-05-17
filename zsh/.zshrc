@@ -4,7 +4,7 @@
 export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/schnie/.oh-my-zsh
+# export ZSH=/usr/local/bin/zsh
 
 # Set editor.
 export EDITOR=vim
@@ -245,11 +245,11 @@ alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 stty -ixon
 
 # Python virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper_lazy.sh
+# export WORKON_HOME=~/.virtualenvs
+# source /usr/bin/virtualenvwrapper_lazy.sh
 
 # Initialize pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # For GPG in git
 export GPG_TTY=$(tty)

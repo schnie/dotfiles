@@ -89,7 +89,9 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable  
+" syntax enable  
+syntax on
+set re=0
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -231,8 +233,9 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
+" let g:hybrid_custom_term_colors = 1
+set t_Co=256
+colorscheme minimalist
 set background=dark
 
 

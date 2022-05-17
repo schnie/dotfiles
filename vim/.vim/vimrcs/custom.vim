@@ -3,7 +3,7 @@ set nofoldenable
 set noshowmode
 " set relativenumber
 set number
-set list
+" set list
 set listchars=tab:▸\ ,space:·,eol:¬
 set nowrap
 

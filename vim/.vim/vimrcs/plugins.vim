@@ -60,8 +60,9 @@ nmap <leader>ps :CtrlPMRU<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='hybridline'
+" let g:airline_theme='hybridline'
 " let g:airline_theme='custom'
+let g:airline_theme='minimalist'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -121,7 +122,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set diffopt+=vertical
+" set diffopt+=vertical
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Easy Motion
@@ -221,3 +222,5 @@ endif
 " => Vim-helm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl set ft=helm
+
+au BufReadPost Tiltfile set syntax=python
