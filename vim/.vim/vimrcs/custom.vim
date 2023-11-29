@@ -1,3 +1,5 @@
+scriptencoding utf-8
+set encoding=utf-8
 " Set some defaults
 set nofoldenable
 set noshowmode

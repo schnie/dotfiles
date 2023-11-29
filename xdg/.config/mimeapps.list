@@ -1,4 +1,0 @@
-
-[Default Applications]
-x-scheme-handler/mailto=google-chrome-beta.desktop
-text/plain=visual-studio-code.desktop

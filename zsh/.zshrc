@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -5,18 +12,28 @@ export KEYTIMEOUT=1
 
 # Path to your oh-my-zsh installation.
 # export ZSH=/usr/local/bin/zsh
+export GOPATH=~/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+export GOPRIVATE="github.com/astronomer"
+# export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # Set editor.
 export EDITOR=vim
 
 # Set some zsh tmux plugin options.
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOCONNECT=false
+# if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+#     export ZSH_TMUX_AUTOSTART=true
+# fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -66,19 +83,9 @@ if [[ ! "$LD_LIBRARY_PATH" =~ "intellij" ]]; then
     plugins+=(tmux)
 fi
 
-source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # User configuration
-
-export GOPATH=~/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
-
-export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
-
-export PATH=~/.local/bin:$PATH
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -226,7 +233,7 @@ alias tfp='terraform plan'
 alias tfa='terraform apply'
 
 # Other aliases
-alias l='LC_COLLATE=C ls -lah --group-directories-first --color=always'
+alias l='LC_COLLATE=C gls -lah --group-directories-first --color=always'
 alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
@@ -242,7 +249,7 @@ alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
 # alias vim='nvim'
 
 # Disable C-s as XOFF
-stty -ixon
+# stty -ixon
 
 # Python virtualenvwrapper
 # export WORKON_HOME=~/.virtualenvs
@@ -251,8 +258,19 @@ stty -ixon
 # Initialize pyenv
 # eval "$(pyenv init -)"
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # For GPG in git
 export GPG_TTY=$(tty)
 
 # Set grep highlight color
 export GREP_COLOR='1;32'
+
+# Set github token
+export GITHUB_DATABASE_TOKEN=$(security find-generic-password -a "$USER" -s "github_database_token" -w)
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /Users/schnie/.docker/init-zsh.sh || true # Added by Docker Desktop
