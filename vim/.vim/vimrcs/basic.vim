@@ -234,6 +234,7 @@ set guioptions-=L
 
 " Colorscheme
 " let g:hybrid_custom_term_colors = 1
+
 set t_Co=256
 colorscheme one
 let theme = system('defaults read -g AppleInterfaceStyle')
