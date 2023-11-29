@@ -16,18 +16,11 @@ export GOPATH=~/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 export GOPRIVATE="github.com/astronomer"
-# export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Set editor.
 export EDITOR=vim
-
-# Set some zsh tmux plugin options.
-# if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-#     export ZSH_TMUX_AUTOSTART=true
-# fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -115,27 +108,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 # Vim
 alias vi='vim'
 
-# Pacman aliases
-alias paccache='paccache -rk 1'
-alias pacorphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias pacupdate='yay -Syu'
-
-# npm run aliases
-alias ns='npm run start'
-alias nd='npm run dev'
-alias nb='npm run build'
-alias nbi='npm run build-image'
-alias npi='npm run push-image'
-alias nt='npm run test'
-alias ntw='npm run test -- --watch'
-alias ndd='npm run deploy'
-
-# make aliases
-alias mr='make run'
-alias mb='make build'
-alias mt='make test'
-alias mi='make install'
-
 # Docker aliases
 alias ds='docker stop $(docker ps -aq)'
 alias dk='docker kill $(docker ps -aq)'
@@ -155,15 +127,6 @@ alias dsdf='docker system df'
 alias dl='docker logs'
 alias de='docker exec -it'
 
-# Bluetooth aliases
-alias bt='bluetoothctl'
-alias bthc='echo -e "power on\nconnect \t\nquit" | bluetoothctl'
-alias bthd='echo -e "disconnect\nquit" | bluetoothctl'
-
-# Weather aliases
-alias weather='curl wttr.in/Cincinnati'
-alias moon='curl wttr.in/Moon'
-
 # Kubernetes
 alias kx='kubectx'
 alias kxp='kubectx -'
@@ -171,76 +134,13 @@ alias kn='kubens'
 alias kc='kubectl'
 alias kp='kubectl proxy &'
 alias kgp='kubectl get pods -o wide'
-# alias kdp='kubectl delete pod'
+alias kdp='kubectl delete pod'
 alias kgs='kubectl get svc -o wide'
-
-function ktg() {
-    # kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | awk '$1 ~ /^token/ {print $2}' | xc
-    kubectl config view --minify | grep access-token | awk '{print $2}' | xclip -selection clipboard
-    echo "GKE service token is now in clipboard!"
-}
-
-function kta(){
-    kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}') | grep token: | awk '{print $2}' | xclip -selection clipboard
-    echo "EKS service token is now in clipboard!"
-}
-
-function ksd() {
-  dataKey=${2}
-  if [ -z "${2}" ]
-    then
-      dataKey="connection"
-  fi
-  kubectl get secret ${1} -o jsonpath --template $(echo "{.data.${dataKey}}") | base64 --decode
-  echo ""
-}
-
-function kdp() {
-  search=${1}
-  kubectl delete pod $(kubectl get pods | grep ${1} | awk '{print $1}')
-}
-
-function klog() {
-  search=${1}
-  kubectl logs $(kubectl get pods | grep ${1} | awk '{print $1}')
-}
-
-function klogf() {
-  search=${1}
-  kubectl logs $(kubectl get pods | grep ${1} | awk '{print $1}') -f
-}
-
-function kedd() {
-  search=${1}
-  kubectl edit deployment $(kubectl get deployment | grep ${1} | awk '{print $1}')
-}
-
-# Helm
-alias hl='helm list'
-alias hd='helm delete --purge'
-alias hs='helm status '
-
-# Minikube
-alias mk='minikube'
-alias mks='minikube start --cpus 6 --memory 8192 --extra-config=apiserver.runtime-config=batch/v2alpha1 --bootstrapper=kubeadm'
-alias mkd='minikube delete'
-alias mkdd='minikube dashboard'
-
-# Terraform
-alias tf='terraform'
-alias tfi='terraform init'
-alias tfp='terraform plan'
-alias tfa='terraform apply'
 
 # Other aliases
 alias l='LC_COLLATE=C gls -lah --group-directories-first --color=always'
-alias calc='bc'
 alias dots='cd $HOME/dotfiles && vim .'
 alias ipaddr='curl ifconfig.co'
-alias v='pulsemixer'
-alias xc='xclip -selection clipboard'
-alias dul='du -a -h --max-depth=1 | sort -hr'
-alias screenshot='scrot -c -d 5 ~/pictures/screenshots/%Y-%m-%d.png'
 
 # Astronomer
 alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
