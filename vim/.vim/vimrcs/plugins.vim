@@ -1,24 +1,4 @@
 """"""""""""""""""""""""""""""
-" => goyo + limelight plugins
-""""""""""""""""""""""""""""""""
-function! s:goyo_enter()
-    Limelight
-    set nolist
-endfunction
-
-function! s:goyo_leave()
-    Limelight!
-    set list
-    hi Normal ctermbg=None
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-let g:limelight_conceal_ctermfg = 'gray'
-
-
-""""""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""""
 
@@ -60,8 +40,7 @@ nmap <leader>ps :CtrlPMRU<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='hybridline'
-" let g:airline_theme='custom'
+let g:airline_theme='one'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -81,33 +60,6 @@ endif
 " let g:airline_symbols.maxlinenr=''
 let g:airline_symbols.linenr=''
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Was getting errors opening python files. Disable syntastic for python for now.
-" let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
-
-" Python
-" let g:syntastic_python_checkers=['']
-
-" " Javascript
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-
-" " Go
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-
-" " Recommended settings
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
@@ -121,7 +73,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set diffopt+=vertical
+" set diffopt+=vertical
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Easy Motion
@@ -151,8 +103,6 @@ let g:ycm_confirm_extra_conf=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Asynchronous Lint Engine (ALE)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:ale_sign_column_always = 1
-
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
@@ -175,7 +125,6 @@ let g:ale_fix_on_save = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
-
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
@@ -184,30 +133,11 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
-" let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 
-" nnoremap <C-n> :cnext<CR>
-" nnoremap <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-terraform
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:terraform_fmt_on_save = 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-jsx
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:jsx_ext_required = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-jsx-pretty
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vim_jsx_pretty_colorful_config = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ack.vim
@@ -215,9 +145,3 @@ let g:vim_jsx_pretty_colorful_config = 1
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-helm
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl set ft=helm

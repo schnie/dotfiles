@@ -89,7 +89,8 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable  
+syntax on
+set re=0
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -221,9 +222,6 @@ map <leader>s? z=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set font
-" set gfn=Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
-
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
 set guioptions-=r
 set guioptions-=R
@@ -231,9 +229,14 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-" let g:hybrid_custom_term_colors = 1
-" colorscheme hybrid
-" set background=dark
+set t_Co=256
+colorscheme one
+let theme = system('defaults read -g AppleInterfaceStyle')
+if theme =~ 'Dark'
+    set background=dark
+else
+    set background=light
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
