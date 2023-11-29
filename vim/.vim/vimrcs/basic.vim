@@ -89,7 +89,6 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-" syntax enable  
 syntax on
 set re=0
 
