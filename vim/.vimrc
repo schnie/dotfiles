@@ -2,7 +2,7 @@
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-    Plug 'airblade/vim-gitgutter'
+    Plug 'airblade/vim-gitgutter', { 'branch': 'main' }
     Plug 'corntrace/bufexplorer'
     Plug 'easymotion/vim-easymotion'
     Plug 'fatih/vim-go'
