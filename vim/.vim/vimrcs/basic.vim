@@ -223,9 +223,6 @@ map <leader>s? z=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set font
-" set gfn=Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
-
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
 set guioptions-=r
 set guioptions-=R
@@ -233,8 +230,6 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-" let g:hybrid_custom_term_colors = 1
-
 set t_Co=256
 colorscheme one
 let theme = system('defaults read -g AppleInterfaceStyle')
