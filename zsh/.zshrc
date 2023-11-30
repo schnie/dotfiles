@@ -8,38 +8,38 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export KEYTIMEOUT=1
-
 # Path to your oh-my-zsh installation.
-# export ZSH=/usr/local/bin/zsh
-export GOPATH=~/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
-export GOPRIVATE="github.com/astronomer"
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export ZSH="$HOME/.oh-my-zsh"
 
-# Set editor.
-export EDITOR=vim
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="agnoster"
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -51,6 +51,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -60,30 +63,33 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent z zsh-syntax-highlighting)
+plugins=(git ssh-agent)
 
-if [[ ! "$LD_LIBRARY_PATH" =~ "intellij" ]]; then
-    plugins+=(tmux)
-fi
-
-source ~/.oh-my-zsh/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR=vim
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -92,9 +98,6 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -105,72 +108,5 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Vim
-alias vi='vim'
-
-# Docker aliases
-alias ds='docker stop $(docker ps -aq)'
-alias dk='docker kill $(docker ps -aq)'
-alias dr='docker rm $(docker ps -aq)'
-alias dc='docker-compose'
-alias dcu='docker-compose up --build'
-alias dcud='docker-compose up --build -d'
-alias dcdv='docker-compose down -v'
-alias di='docker images'
-alias dps='docker ps -a'
-alias dsp='docker system prune --force'
-alias dspv='docker system prune --volumes --force'
-alias dspva='docker system prune --volumes --all --force'
-alias dsdf='docker system df'
-alias dnuke='dspva'
-alias dsdf='docker system df'
-alias dl='docker logs'
-alias de='docker exec -it'
-
-# Kubernetes
-alias kx='kubectx'
-alias kxp='kubectx -'
-alias kn='kubens'
-alias kc='kubectl'
-alias kp='kubectl proxy &'
-alias kgp='kubectl get pods -o wide'
-alias kdp='kubectl delete pod'
-alias kgs='kubectl get svc -o wide'
-
-# Other aliases
-alias l='LC_COLLATE=C gls -lah --group-directories-first --color=always'
-alias dots='cd $HOME/dotfiles && vim .'
-alias ipaddr='curl ifconfig.co'
-
-# Astronomer
-alias astroupdate='curl -sL https://install.astronomer.io | sudo bash'
-
-# Alias vim to nvim
-# alias vim='nvim'
-
-# Disable C-s as XOFF
-# stty -ixon
-
-# Python virtualenvwrapper
-# export WORKON_HOME=~/.virtualenvs
-# source /usr/bin/virtualenvwrapper_lazy.sh
-
-# Initialize pyenv
-# eval "$(pyenv init -)"
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# For GPG in git
-export GPG_TTY=$(tty)
-
-# Set grep highlight color
-export GREP_COLOR='1;32'
-
-# Set github token
-export GITHUB_DATABASE_TOKEN=$(security find-generic-password -a "$USER" -s "github_database_token" -w)
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /Users/schnie/.docker/init-zsh.sh || true # Added by Docker Desktop
