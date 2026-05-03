@@ -229,14 +229,14 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-set t_Co=256
-colorscheme one
-let theme = system('defaults read -g AppleInterfaceStyle')
-if theme =~ 'Dark'
-    set background=dark
-else
-    set background=light
-endif
+" set t_Co=256
+" colorscheme one
+" let theme = system('defaults read -g AppleInterfaceStyle')
+" if theme =~ 'Dark'
+"     set background=dark
+" else
+"     set background=light
+" endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
